@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'MuseoModerno', cursive;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #1a1a1a;
+}
+
+/* automaticamente o class menu e class logo eles viram flex itens  */
+header {
+    width: 100%;
+    height: 70px;
+
+    background-color: #101010;
+    box-shadow: 0px 5px 20px #0000;
+
+    padding: 10px;
+
+    display: flex;
+
+    align-items: center;
+    /* quebra a lista de itens com o logo */
+    flex-wrap: wrap;
+
+    /* aqui estilizo que um fique a esquerda e outro a direita */
+    justify-content: space-between;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li a {
+    color: #ffff;
+
+    /* virar elemento caixa  */
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;  
+    border-radius: 10px;
+
+    margin-left: 10px;
+}
+
+.menu li a:hover {
+    color: #ffff;
+
+    /* virar elemento caixa  */
+    display: block;
+    text-decoration: none;
+    background-color: #333;
+
+    margin-left: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+h1 {
+    color: #ffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    /* a imagem vai se ajustar ao tamanho da página */
+    max-width: 1200px;
+    margin: 0 auto;
+
+    /* ele vai aplicar todas as divs e deixa as imagens uma do lado da outra */
+    display: flex;
+
+    /* quebra a linha das imagens, ou seja, se eu diminuo o tamanho da tela, a imagem vai para linha abaixo */
+    flex-wrap: wrap;
+}
+
+/* a div virou um flex item, então vamos ajustar */
+.container div {
+    /* deixei o mínimo de 300px, quando a imagem chegar no 300px, a imagem quebra */
+    flex: 1 1 300px;
+
+    margin: 10px;
+}
+
+img {
+    /* imagem vai se ajustar ao tamanho do container */
+    width: 100%; 
+    border-radius: 10px;
+}
